@@ -5,13 +5,13 @@
              BackgroundImage="background.png"
              NavigationPage.HasNavigationBar="False" Opacity="0.5">
     <StackLayout Orientation="Vertical" Padding="15">
-        <Image HorizontalOptions="Center" Source="tick.png" Opacity="0.7" Scale="0.8"></Image>
+        <Image HorizontalOptions="Center" Source="tick.png" Opacity="0.7" Scale="0.8"/>
         <Frame BackgroundColor="Transparent" Margin="0,30,0,5">
             <StackLayout Orientation="Vertical" Spacing="10">
-                <Label Text="EMAIL" TextColor="AntiqueWhite" FontSize="14"/>
+                <Label Text="EMAIL" TextColor="AntiqueWhite" FontSize="14" Margin="10,0,0,0"/>
                 <Entry
                     x:Name="EmailEntry" Placeholder="Enter email" TextColor="AntiqueWhite" PlaceholderColor="Gainsboro" FontSize="14"/>
-                <Label Text="PASSWORD" TextColor="AntiqueWhite" FontSize="14"/>
+                <Label Text="PASSWORD" TextColor="AntiqueWhite" FontSize="14" Margin="10,0,0,0"/>
                 <Entry 
                     x:Name="PasswordEntry"
                     Placeholder="Password" IsPassword="True" TextColor="AntiqueWhite" PlaceholderColor="Gainsboro" FontSize="14"/>
@@ -19,8 +19,10 @@
         </Frame>
         <Button
             Opacity="0.8"
+            HeightRequest="60"
             x:Name="SignInButton"
             Text="Sign In"
+            Clicked="SignInButton_OnClicked"
             BackgroundColor="DodgerBlue"
             FontSize="18"
             TextColor="White">
@@ -28,6 +30,8 @@
         <Button
             Opacity="0.8"
             x:Name="SignUpButton"
+            HeightRequest="60"
+            Clicked="SignUpButton_OnClicked"
             Text="Sign Up"
             BackgroundColor="DodgerBlue"
             FontSize="18"

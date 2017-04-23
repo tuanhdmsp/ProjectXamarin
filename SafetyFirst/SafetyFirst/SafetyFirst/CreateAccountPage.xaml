@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SafetyFirst.CreateAccountPage"
+             NavigationPage.HasBackButton="True"
+             BackgroundImage="background.png" Title="Sign Up" Opacity="0.5">
+    <StackLayout Orientation="Vertical" Padding="15">
+        <Image HorizontalOptions="Center" Source="tick.png" Opacity="0.7" Scale="1" HeightRequest="170"/>
+        <Frame BackgroundColor="Transparent" Margin="0,0,0,5">
+            <StackLayout Orientation="Vertical">
+                <Label Text="NAME" TextColor="AntiqueWhite" FontSize="14" Margin="10,0,0,0"/>
+                <Entry
+                    x:Name="CreateNameEntry" Placeholder="Enter name" TextColor="AntiqueWhite" PlaceholderColor="Silver" FontSize="14"/>
+                
+                <Label Text="EMAIL" TextColor="AntiqueWhite" FontSize="14" Margin="10,0,0,0"/>
+                <Entry 
+                    x:Name="CreateEmailEntry" Placeholder="Enter email" TextColor="AntiqueWhite" PlaceholderColor="Gainsboro" FontSize="14"/>
+                
+                <Label Text="PASSWORD" TextColor="AntiqueWhite" FontSize="14" Margin="10,0,0,0"/>
+                <Entry
+                    x:Name="CreatePasswordEntry" Placeholder="Enter password" IsPassword="True" TextColor="AntiqueWhite" PlaceholderColor="Gainsboro" FontSize="14"/>
+                
+                <Label Text="PHONE" TextColor="AntiqueWhite" FontSize="14" Margin="10,0,0,0"/>
+                <Entry 
+                    x:Name="CreatePhoneEntry" Placeholder="Enter phone" TextColor="AntiqueWhite" PlaceholderColor="Gainsboro" FontSize="14"/>
+            </StackLayout>
+        </Frame>
+        <Button
+            Opacity="0.8"
+            Clicked="CreateSignUpButton_OnClicked"
+            HeightRequest="60"
+            x:Name="CreateSignUpButton"
+            Text="Continue"
+            BackgroundColor="DodgerBlue"
+            FontSize="18"
+            TextColor="White">
+        </Button>
+    </StackLayout>
+</ContentPage>
